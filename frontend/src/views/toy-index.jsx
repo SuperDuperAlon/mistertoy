@@ -1,16 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ToyFilter } from "../pages/toy-filter";
+import { ToyFilterLabel } from "../pages/toy-filter-label";
 import { ToyList } from "../pages/ToyList";
 import { store } from "../store/store.js";
-import { loadToys, removeToy, saveToy, setFilter } from "../store/toy.action.js";
+import {
+  loadToys,
+  removeToy,
+  saveToy,
+  setFilter,
+} from "../store/toy.action.js";
 import { useEffect } from "react";
 
 export function ToyIndex() {
   const toys = useSelector((storeState) => storeState.toyModule.toys);
-  const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
-
-  console.log(toys);
+  const filterBy = useSelector((storeState) => storeState.toyModule.filterBy);
 
   useEffect(() => {
     onLoadToys(filterBy);
@@ -37,17 +41,6 @@ export function ToyIndex() {
       });
   }
 
-//   function onAddToy(toy) {
-//     // const toyToSave = toyService.getRandomtoy()
-//     saveToy(toy)
-//       .then((savedtoy) => {
-//         // showSuccessMsg(`toy added (id: ${savedtoy._id})`)
-//       })
-//       .catch((err) => {
-//         // showErrorMsg('Cannot add toy')
-//       });
-//   }
-
   function onEditToy(toy) {
     saveToy(toy)
       .then((toy) => {
@@ -59,12 +52,13 @@ export function ToyIndex() {
   }
 
   function onSetFilter(filter) {
-    setFilter(filter)
-}
+    setFilter(filter);
+  }
 
   return (
     <section>
       <ToyFilter onSetFilter={onSetFilter} />
+      {/* <ToyFilterLabel /> */}
       <Link to={`/toys/edit`}>Add Toy</Link>
       <ToyList toys={toys} onRemoveToy={onRemoveToy} onEditToy={onEditToy} />
     </section>

@@ -12,6 +12,7 @@ import { Home } from "./views/home";
 import { ToyEdit } from "./views/toy-edit";
 import { ToyDetails } from "./views/toy-details";
 import { store } from "../src/store/store.js";
+import { Dashboard} from './views/dashboard'
 // import { Route, Router } from 'react-router-dom';
 
 export function App() {
@@ -28,6 +29,7 @@ export function App() {
               <Route element={<ToyDetails />} path="/toys/:toyId" />
               <Route element={<ToyEdit />} path="/toys/edit" />
               <Route element={<ToyEdit />} path="/toys/edit/:toyId" />
+              <Route element={<Dashboard />} path="/dashboard" />
             </Routes>
           </main>
           <AppFooter />

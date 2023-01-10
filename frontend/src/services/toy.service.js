@@ -8,7 +8,7 @@ import { utilService } from "./util.service.js";
 const STORAGE_KEY = "toyDB";
 const BASE_URL = "/toys";
 
-var toys = _createtoys();
+_createtoys();
 
 export const toyService = {
   query,
@@ -17,6 +17,7 @@ export const toyService = {
   remove,
   getEmptyToy,
   getDefaultFilter,
+  getLabels
 };
 
 function query(filterBy = getDefaultFilter()) {
@@ -62,10 +63,10 @@ function save(toy) {
   if (toy._id) {
     return asyncStorageService.put(STORAGE_KEY, toy);
   } else {
-    const newToy = {...toy}
-    newToy.createdAt = new Date()
-    newToy.inStock = true
-    
+    const newToy = { ...toy };
+    newToy.createdAt = new Date();
+    newToy.inStock = true;
+
     return asyncStorageService.post(STORAGE_KEY, newToy);
   }
 }
@@ -78,6 +79,10 @@ function getEmptyToy() {
   };
 }
 
+function getLabels() {
+  return labels
+}
+
 function getDefaultFilter() {
   return { txt: "", inStock: "", outStock: "", labels: [] };
 }
@@ -85,7 +90,7 @@ function getDefaultFilter() {
 function _createtoys() {
   var toys = storageService.loadFromStorage(STORAGE_KEY);
   if (!toys || !toys.length) {
-    var toys = [
+    toys = [
       {
         _id: utilService.makeId(),
         name: "Pikachu",
@@ -141,12 +146,3 @@ const labels = [
   "Outdoor",
   "Battery Powered",
 ];
-
-// const toy = {
-//   _id: "t101",
-//   name: "Talking Doll",
-//   price: 123,
-//   labels: ["Doll", "Battery Powered", "Baby"],
-//   createdAt: 1631031801011,
-//   inStock: true,
-// };
