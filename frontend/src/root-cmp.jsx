@@ -13,6 +13,7 @@ import { ToyEdit } from "./views/toy-edit";
 import { ToyDetails } from "./views/toy-details";
 import { store } from "../src/store/store.js";
 import { Dashboard} from './views/dashboard'
+import { Login} from './views/login-page'
 // import { Route, Router } from 'react-router-dom';
 
 export function App() {
@@ -30,6 +31,7 @@ export function App() {
               <Route element={<ToyEdit />} path="/toys/edit" />
               <Route element={<ToyEdit />} path="/toys/edit/:toyId" />
               <Route element={<Dashboard />} path="/dashboard" />
+              <Route element={<Login />} path="/login" />
             </Routes>
           </main>
           <AppFooter />

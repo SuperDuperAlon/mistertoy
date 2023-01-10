@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ToyFilter } from "../pages/toy-filter";
-import { ToyFilterLabel } from "../pages/toy-filter-label";
 import { ToyList } from "../pages/ToyList";
 import { store } from "../store/store.js";
 import {
@@ -58,7 +57,6 @@ export function ToyIndex() {
   return (
     <section>
       <ToyFilter onSetFilter={onSetFilter} />
-      {/* <ToyFilterLabel /> */}
       <Link to={`/toys/edit`}>Add Toy</Link>
       <ToyList toys={toys} onRemoveToy={onRemoveToy} onEditToy={onEditToy} />
     </section>

@@ -1,0 +1,11 @@
+.main-app {
+    width: 40%;
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 45px;
+    padding: 1.5rem 3rem;
+}
+
+.main-app > * {
+    text-align: center;
+}

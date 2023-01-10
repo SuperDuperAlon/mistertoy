@@ -1,0 +1,43 @@
+.todo-list {
+    width: 40%;
+    margin: auto;
+    display: flex;
+}
+
+.todo-list-list {
+    color: black;
+}
+
+.todo-list-list>* {
+    color: black;
+    display: flex;
+}
+
+.todo-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px lightcoral solid;
+}
+
+.todo:last-child{
+    border-bottom: none;
+}
+
+.todo button {
+    border: none;
+    background-color: crimson;
+    color: white;
+}
+
+.todoDone {
+    text-decoration: line-through;
+    background-color: grey;
+    opacity: 0.7;
+}
