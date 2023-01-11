@@ -1,6 +1,7 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./assets/styles/main.css";
+import "./assets/styles/scss/main.scss";
 
 import { Provider } from "react-redux";
 
@@ -20,7 +21,7 @@ export function App() {
   return (
     <Provider store={store}>
       <Router>
-        <section className="main-layout app">
+        <section className="homepage main-layout">
           <AppHeader />
           <main>
             <Routes>

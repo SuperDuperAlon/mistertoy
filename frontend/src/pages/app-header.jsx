@@ -4,7 +4,7 @@ export function AppHeader() {
 
 
     return (
-        <header className="app-header">
+        <header className="full main-layout">
             <div className="logo">Toytopia</div>
             <nav>
                 <NavLink to="/">Home</NavLink> |

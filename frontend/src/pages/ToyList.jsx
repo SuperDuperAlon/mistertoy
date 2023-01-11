@@ -6,7 +6,7 @@ export function ToyList({ toys, onRemoveToy }) {
   return (
     <section>
       {toys.map((toy) => (
-        <li className="toy-preview" key={toy._id}>
+        <li className="toy-preview clean-list" key={toy._id}>
           <ToyPreview toy={toy} />
           <div>
             <button

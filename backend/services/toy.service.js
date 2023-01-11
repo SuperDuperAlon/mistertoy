@@ -10,7 +10,7 @@ module.exports = {
 }
 
 function query(filterBy) {
-    console.log(filterBy);
+    // console.log(filterBy);
       let filteredToys = toys;
       if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, "i");

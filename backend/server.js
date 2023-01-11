@@ -6,13 +6,14 @@ const cors = require('cors')
 const app = express()
 
 // App configuration
-// app.use(express.static('public'))
+app.use(express.static('public'))
 
 const corsOptions = {
     origin: ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://127.0.0.1:3000', 'http://localhost:3000'],
     credentials: true
 }
 app.use(cors(corsOptions))
+console.log(corsOptions);
 
 
 app.use(cookieParser())
