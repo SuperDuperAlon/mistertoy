@@ -1,0 +1,98 @@
+[
+    {
+        "_id": "4hMmtH",
+        "name": "Squirtle",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1655163974,
+        "inStock": "true"
+    },
+    {
+        "_id": "OqXt1F",
+        "name": "Pikachu",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1338800537,
+        "inStock": "true"
+    },
+    {
+        "_id": "b2RTga",
+        "name": "Charizard",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1468944527,
+        "inStock": "true"
+    },
+    {
+        "_id": "V48LbI",
+        "name": "Gengar",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1364464051,
+        "inStock": "true"
+    },
+    {
+        "_id": "8Eeil0",
+        "name": "Arcanine",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1587044490,
+        "inStock": "false"
+    },
+    {
+        "_id": "alIy6u",
+        "name": "Bulbasaur",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1214534515,
+        "inStock": "false"
+    },
+    {
+        "_id": "CClX2H",
+        "name": "Blaziken",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1244733443,
+        "inStock": "false"
+    },
+    {
+        "_id": "6aLHuF",
+        "name": "Umbreon",
+        "price": 120,
+        "labels": [
+            "Outdoor",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1609746022,
+        "inStock": "false"
+    }
+]

@@ -23,7 +23,7 @@ nav a {
 }
 
 nav a:active {
-    color: darkblue;
+    color: orange;
 }
 
 nav a.active {
