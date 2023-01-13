@@ -4,9 +4,9 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { toyService } from "../services/toy.service.js";
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js";
 
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
-import { TextField } from '@mui/material';
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import { TextField } from "@mui/material";
 
 export function ToyEdit() {
   const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy());
@@ -18,27 +18,25 @@ export function ToyEdit() {
     loadToy();
   }, []);
 
-  function loadToy() {
-    toyService
-      .getById(toyId)
-      .then((toy) => setToyToEdit(toy))
-      .catch((err) => {
-        console.log("Had issues in toy details", err);
-        navigate("/toys");
-      });
+  async function loadToy() {
+    try {
+      const toy = await toyService.getById(toyId);
+      setToyToEdit(toy);
+    } catch (err) {
+      console.log("Had issues in toy details", err);
+      navigate("/toys");
+    }
   }
 
-  function handleChange({target}){
-    let { value, type, name: field } = target
-    value = type === 'number' ? +value : value
-    if (field === 'labels'){
-        const newVal = value.split(',')
-        console.log(newVal);
-        setToyToEdit((prevToy) => ({ ...prevToy, [field]: newVal }))
-    }
-    else setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }))
-}
-
+  function handleChange({ target }) {
+    let { value, type, name: field } = target;
+    value = type === "number" ? +value : value;
+    if (field === "labels") {
+      const newVal = value.split(",");
+      console.log(newVal);
+      setToyToEdit((prevToy) => ({ ...prevToy, [field]: newVal }));
+    } else setToyToEdit((prevToy) => ({ ...prevToy, [field]: value }));
+  }
 
   function onSaveToy(ev) {
     ev.preventDefault();
@@ -97,8 +95,6 @@ export function ToyEdit() {
   );
 }
 
-
-
 // const SignupSchema = Yup.object().shape({
 //     firstName: Yup.string()
 //         .min(2, 'Too Short!')
@@ -110,8 +106,6 @@ export function ToyEdit() {
 //         .required('Required'),
 //     email: Yup.string().email('Invalid email').required('Required'),
 // });
-
-
 
 // const CustomTextField = (props) => {
 //     return <TextField id="outlined-basic" label="Outlined" variant="outlined" {...props}  />

@@ -1,6 +1,5 @@
 const fs = require('fs')
 var toys = require('../data/toys.json')
-console.log(toys);
 
 module.exports = {
     query, 
@@ -10,10 +9,9 @@ module.exports = {
 }
 
 function query(filterBy) {
-    // console.log(filterBy);
       let filteredToys = toys;
-      if (filterBy.txt) {
-        const regex = new RegExp(filterBy.txt, "i");
+      if (filterBy.name) {
+        const regex = new RegExp(filterBy.name, "i");
         filteredToys = filteredToys.filter((toys) => regex.test(toys.name));
       }
       if (filterBy.outStock) {
@@ -84,7 +82,7 @@ function _makeId(length = 5) {
 function _writeToysToFile() {
     return new Promise((res, rej) => {
         const data = JSON.stringify(toys, null, 2)
-        fs.writeFile('data/toys .json', data, (err) => {
+        fs.writeFile('data/toys.json', data, (err) => {
             if (err) return rej(err)
             // console.log("File written successfully\n");
             res()

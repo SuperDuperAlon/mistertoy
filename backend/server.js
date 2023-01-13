@@ -27,7 +27,7 @@ app.get('/api/toys', (req, res) => {
     toyService.query(filterBy)
         .then((toys) => {
             res.send(toys)
-        })
+        })  
         .catch(err => {
             console.log('Error:', err)
             res.status(400).send('Cannot get toys')
@@ -35,7 +35,7 @@ app.get('/api/toys', (req, res) => {
 })
 
 // Update
-app.put('/api/toys/:toyIdcd', (req, res) => {
+app.put('/api/toys/:toyId', (req, res) => {
     // const loggedinUser = userService.validateToken(req.cookies.loginToken)
     // if (!loggedinUser) return res.status(401).send('Cannot update toy')
 
