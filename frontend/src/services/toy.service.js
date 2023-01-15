@@ -21,8 +21,6 @@ export const toyService = {
 };
 
 async function query(filterBy) {
-  console.log(filterBy);
-  console.log(filterBy.name);
   const queryParams = 
   `?name=${filterBy.name}&inStock=${filterBy.inStock}&label=${filterBy.labels}`
   return httpService.get(BASE_URL + queryParams)
