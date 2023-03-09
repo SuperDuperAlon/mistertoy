@@ -48,6 +48,16 @@ button {
     border-radius: 45px;
     padding: 0.5rem 1.5rem;
   }
+  &.crud-btn {
+    background-color: white;
+    border-right: 1px solid black;
+    color: goldenrod;
+    font-size: 14px;
+    font-weight: 600;
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
 
 .btn {

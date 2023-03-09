@@ -27,8 +27,11 @@ export function ToyDetails() {
   if (!toy) return <div>Loading...</div>;
   return (
     <section className="toy-details">
+      <div className="flex">
+
       <h1>{toy.name}</h1>
       <h5>Price: ${toy.price}</h5>
+      </div>
       <img src={`https://robohash.org/${toy.name}`} alt="" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas
