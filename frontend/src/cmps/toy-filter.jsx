@@ -55,13 +55,12 @@ export function ToyFilter({ onSetFilter }) {
   function handleChange({ target }) {
     let { value, name: field, type } = target;
 
-
     if (field) {
       value = [field] === "active || done" ? +value : value;
       setFilterByToEdit((prevFilter) => ({ ...prevFilter, [field]: value }));
     }
     if (!field) {
-      setFilterByToEdit((prevFilter) => ({...prevFilter, labels: value}))
+      setFilterByToEdit((prevFilter) => ({ ...prevFilter, labels: value }));
     }
   }
 
@@ -78,9 +77,9 @@ export function ToyFilter({ onSetFilter }) {
   }
 
   return (
-    <section className="toy-filter full main-layout">
+    <section className="toy-filter">
       <form onSubmit={onSubmitFilter}>
-        <label htmlFor="name">Vendor:</label>
+        <label htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
@@ -142,7 +141,7 @@ export function ToyFilter({ onSetFilter }) {
             Out of Stack
           </button>
         </div>
-        <button hidden>Filter</button>
+        <button>Filter</button>
       </form>
     </section>
   );

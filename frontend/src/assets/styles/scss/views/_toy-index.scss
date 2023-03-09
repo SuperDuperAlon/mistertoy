@@ -1,8 +1,8 @@
 .toy-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 220px);
-    gap: 1rem;
-    margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .toy-preview {
@@ -10,6 +10,21 @@
   border-radius: 1rem;
   border: 2px groove goldenrod;
   > img {
-      display: flex;
+    display: flex;
+  }
+  &.plus-sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin: auto 0;
+  }
+}
+
+.toy-filter {
+  padding: 0.5rem;
+  display: flex;
+  & input {
+    padding: 0;
   }
 }

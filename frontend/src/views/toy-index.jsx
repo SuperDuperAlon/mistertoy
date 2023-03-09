@@ -54,7 +54,6 @@ export function ToyIndex() {
   return (
     <section>
       <ToyFilter onSetFilter={onSetFilter} />
-      <Link to={`/toys/edit`}>Add Toy</Link>
       <ToyList toys={toys} onRemoveToy={onRemoveToy} onEditToy={onEditToy} />
     </section>
   );
