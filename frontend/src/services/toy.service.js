@@ -22,7 +22,7 @@ export const toyService = {
 
 async function query(filterBy) {
   const queryParams = 
-  `?name=${filterBy.name}&inStock=${filterBy.inStock}&label=${filterBy.labels}`
+  `?name=${filterBy.name}&inStock=${filterBy.inStock}&label=${filterBy.labels}&price=${filterBy.maxPrice}`
   return httpService.get(BASE_URL + queryParams)
 }
 
@@ -55,7 +55,7 @@ function getLabels() {
 }
 
 function getDefaultFilter() {
-  return { name: "", inStock: "", outStock: "", labels: [] };
+  return { name: "", inStock: "", outStock: "", labels: [], maxPrice: '' };
 }
 
 const labels = [

@@ -19,6 +19,8 @@ export function ToyIndex() {
     onLoadToys(filterBy);
   }, [filterBy]);
 
+  console.log(toys);
+
   async function onLoadToys(filterBy) {
     try {
       await loadToys(filterBy);
