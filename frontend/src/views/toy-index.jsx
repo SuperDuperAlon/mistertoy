@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { ToyFilter } from "../pages/toy-filter";
-import { ToyList } from "../pages/ToyList";
+import { ToyFilter } from "../cmps/toy-filter";
+import { ToyList } from "../cmps/ToyList";
 import { store } from "../store/store.js";
 import {
   loadToys,
