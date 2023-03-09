@@ -1,4 +1,4 @@
-import { ToyPreview } from "./ToyPreview";
+import { ToyPreview } from "./toy-preview";
 import { ToyIndex } from "../views/toy-index";
 import { Link } from "react-router-dom";
 
