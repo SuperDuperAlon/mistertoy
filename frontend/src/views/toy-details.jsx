@@ -15,23 +15,21 @@ export function ToyDetails() {
 
   async function loadToy() {
     try {
-      const toy = await toyService.getById(toyId)
-      setToy(toy)
-    } 
-    catch (err) {
-      console.log('Had issues in toy details', err)
+      const toy = await toyService.getById(toyId);
+      setToy(toy);
+    } catch (err) {
+      console.log("Had issues in toy details", err);
       // showErrorMsg('Cannot load toy')
       navigate("/toys");
     }
-
   }
 
   if (!toy) return <div>Loading...</div>;
   return (
     <section className="toy-details">
-      <h1>toy vendor : {toy.name}</h1>
+      <h1>{toy.name}</h1>
       <h5>Price: ${toy.price}</h5>
-      <p>⛐</p>
+      <img src={`https://robohash.org/${toy.name}`} alt="" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas
         cumque tempore, aperiam sed dolorum rem! Nemo quidem, placeat

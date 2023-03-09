@@ -1,0 +1,12 @@
+.toy-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    gap: 10px;
+}
+
+.toy-preview {
+  border: 4px solid #000;
+  > img {
+      display: flex;
+  }
+}

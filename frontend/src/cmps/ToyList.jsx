@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function ToyList({ toys, onRemoveToy }) {
   return (
-    <section>
+    <section className="toy-list">
       {toys.map((toy) => (
         <li className="toy-preview clean-list" key={toy._id}>
           <ToyPreview toy={toy} />
@@ -19,7 +19,6 @@ export function ToyList({ toys, onRemoveToy }) {
             <button><Link to={`/toys/edit/${toy._id}`}>Edit</Link></button>
             <button><Link to={`/toys/${toy._id}`}>Preview</Link></button>
           </div>
-
         </li>
       ))}
     </section>
