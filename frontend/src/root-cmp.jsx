@@ -5,8 +5,8 @@ import "./assets/styles/scss/main.scss";
 
 import { Provider } from "react-redux";
 
-import { AppFooter } from "./pages/app-footer";
-import { AppHeader } from "./pages/app-header";
+import { AppFooter } from "./cmps/app-footer";
+import { AppHeader } from "./cmps/app-header";
 import { About } from "./views/about";
 import { ToyIndex } from "./views/toy-index";
 import { Home } from "./views/home";
